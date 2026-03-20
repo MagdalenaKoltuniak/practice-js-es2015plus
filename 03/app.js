@@ -6,6 +6,7 @@ const convertToBytes = (length, unit = 'B') => {
 		KB: 1024,
 		MB: 1024 ** 2,
 		GB: 1024 ** 3,
+		TB: 1024 ** 4,
 	};
 
 	return length * (units[unit] || 1);
