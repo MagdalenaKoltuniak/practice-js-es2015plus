@@ -6,10 +6,12 @@ const calcTotalPrice = () => {
 	let sum = 0;
 
 	[...inputItems].forEach(item => {
-		const { price } = item.dataset;
-		const quantity = item.value;
+		const {
+			dataset: { price },
+			value,
+		} = item;
 
-		sum += Number(price) * Number(quantity);
+		sum += Number(price) * Number(value);
 	});
 
 	return sum;
